@@ -14,7 +14,7 @@ class CSPDarknet(nn.Module):
         self.dark4 = self._block(base_channels * 4, base_channels * 8, base_depth * 3, [1,2,3])
         self.dark5 = self._block(base_channels * 8, base_channels * 16, base_depth, [1,2,3], use_spp=True)
 
-        # Given the uneven characteristics, no pretrained weights are set here.
+        # Train weights that are specific to your unique traits.
         if pretrained:
             print("✔ Advanced CSPDarknet can be trained from scratch to fit your dataset.")
             print("✔ If training is unstable, consider starting with a smaller configuration.")
